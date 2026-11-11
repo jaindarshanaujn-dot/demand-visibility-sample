@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <VBox items="{detail>/sections}" renderType="Bare" width="100%">
+    <Panel headerText="{detail>title}" class="sapUiSmallMarginBottom" width="auto">
+      <List
+        items="{path: 'detail>fields', templateShareable: false}"
+        showSeparators="Inner"
+        backgroundDesign="Transparent"
+      >
+        <DisplayListItem label="{detail>label}" value="{detail>value}" />
+      </List>
+    </Panel>
+  </VBox>
+</core:FragmentDefinition>

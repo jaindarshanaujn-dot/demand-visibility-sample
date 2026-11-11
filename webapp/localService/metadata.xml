@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="2.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="DemandVisibilityService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+      <EntityType Name="Order">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.String" Nullable="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderNumber" Type="Edm.String" Nullable="true" sap:label="Order Number" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderLine" Type="Edm.Int32" Nullable="true" sap:label="Order Line" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SchedLineNbr" Type="Edm.Int32" Nullable="true" sap:label="Sched Line Nbr" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderType" Type="Edm.String" Nullable="true" sap:label="Order Type" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PoNumber" Type="Edm.String" Nullable="true" sap:label="PO Number" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PoLine" Type="Edm.Int32" Nullable="true" sap:label="PO Line" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Material" Type="Edm.String" Nullable="true" sap:label="Material" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Planner" Type="Edm.String" Nullable="true" sap:label="Planner" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialEntered" Type="Edm.String" Nullable="true" sap:label="Material Entered" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CustomerPartNumber" Type="Edm.String" Nullable="true" sap:label="Customer Part Number" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderQty" Type="Edm.Decimal" Nullable="true" sap:label="Order Qty" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ConfirmedQty" Type="Edm.Decimal" Nullable="true" sap:label="Confirmed Qty" sap:sortable="true" sap:filterable="true" />
+        <Property Name="TotalQuantityOnDelivery" Type="Edm.Decimal" Nullable="true" sap:label="Total Quantity on Delivery" sap:sortable="true" sap:filterable="true" />
+        <Property Name="QtyOnDeliveryNotInvoiced" Type="Edm.Decimal" Nullable="true" sap:label="Qty on Delivery (not invoiced)" sap:sortable="true" sap:filterable="true" />
+        <Property Name="QtyInvoiced" Type="Edm.Decimal" Nullable="true" sap:label="Qty Invoiced" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OpenQty" Type="Edm.Decimal" Nullable="true" sap:label="Open Qty" sap:sortable="true" sap:filterable="true" />
+        <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="true" sap:label="Unit Price" sap:sortable="true" sap:filterable="true" />
+        <Property Name="TotalLineValue" Type="Edm.Decimal" Nullable="true" sap:label="Total Line Value" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OpenValue" Type="Edm.Decimal" Nullable="true" sap:label="Open Value" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CrdDate" Type="Edm.String" Nullable="true" sap:label="CRD Date" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DeliveryDate" Type="Edm.String" Nullable="true" sap:label="Delivery Date" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SchedDlvDate" Type="Edm.String" Nullable="true" sap:label="Sched Dlv Date" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ScheduledMad" Type="Edm.String" Nullable="true" sap:label="Scheduled MAD" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SchedGidDate" Type="Edm.String" Nullable="true" sap:label="Sched GID Date" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PoType" Type="Edm.String" Nullable="true" sap:label="PO Type" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialLeadTimeWeeks" Type="Edm.Decimal" Nullable="true" sap:label="Material Lead Time Weeks" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CreatedOn" Type="Edm.String" Nullable="true" sap:label="Created On" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DocumentCreatedBy" Type="Edm.String" Nullable="true" sap:label="Document Created By" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderLineCreated" Type="Edm.String" Nullable="true" sap:label="Order Line Created" sap:sortable="true" sap:filterable="true" />
+        <Property Name="LineCreatedBy" Type="Edm.String" Nullable="true" sap:label="Line Created By" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Soldto" Type="Edm.String" Nullable="true" sap:label="SoldTo" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoName1" Type="Edm.String" Nullable="true" sap:label="SoldTo Name 1" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoName2" Type="Edm.String" Nullable="true" sap:label="SoldTo Name 2" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoCountry" Type="Edm.String" Nullable="true" sap:label="SoldTo Country" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoParent" Type="Edm.String" Nullable="true" sap:label="SoldTo Parent" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoParentName" Type="Edm.String" Nullable="true" sap:label="SoldTo Parent Name" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Shipto" Type="Edm.String" Nullable="true" sap:label="ShipTo" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoName1" Type="Edm.String" Nullable="true" sap:label="ShipTo Name1" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoName2" Type="Edm.String" Nullable="true" sap:label="ShipTo Name2" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoCountry" Type="Edm.String" Nullable="true" sap:label="ShipTo Country" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoParent" Type="Edm.String" Nullable="true" sap:label="ShipTo Parent" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoParentName" Type="Edm.String" Nullable="true" sap:label="ShipTo Parent Name" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoEmail" Type="Edm.String" Nullable="true" sap:label="SoldTo Email" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoEmail" Type="Edm.String" Nullable="true" sap:label="ShipTo Email" sap:sortable="true" sap:filterable="true" />
+        <Property Name="BuyerEmail" Type="Edm.String" Nullable="true" sap:label="Buyer Email" sap:sortable="true" sap:filterable="true" />
+        <Property Name="EndCustomer" Type="Edm.String" Nullable="true" sap:label="End Customer" sap:sortable="true" sap:filterable="true" />
+        <Property Name="EndCustomerName1" Type="Edm.String" Nullable="true" sap:label="End Customer Name 1" sap:sortable="true" sap:filterable="true" />
+        <Property Name="EndCustomerParent" Type="Edm.String" Nullable="true" sap:label="End Customer Parent" sap:sortable="true" sap:filterable="true" />
+        <Property Name="EndCustomerParentName" Type="Edm.String" Nullable="true" sap:label="End Customer Parent Name" sap:sortable="true" sap:filterable="true" />
+        <Property Name="AltConsignee" Type="Edm.String" Nullable="true" sap:label="Alt Consignee" sap:sortable="true" sap:filterable="true" />
+        <Property Name="AltConsigneeName1" Type="Edm.String" Nullable="true" sap:label="Alt Consignee Name 1" sap:sortable="true" sap:filterable="true" />
+        <Property Name="AltConsigneeName2" Type="Edm.String" Nullable="true" sap:label="Alt Consignee Name 2" sap:sortable="true" sap:filterable="true" />
+        <Property Name="RvEndCustomer" Type="Edm.String" Nullable="true" sap:label="RV End Customer" sap:sortable="true" sap:filterable="true" />
+        <Property Name="RvEndCustomerName1" Type="Edm.String" Nullable="true" sap:label="RV End Customer Name1" sap:sortable="true" sap:filterable="true" />
+        <Property Name="RvEndCustomerName2" Type="Edm.String" Nullable="true" sap:label="RV End Customer Name2" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PurchaseCustomerCsrId" Type="Edm.String" Nullable="true" sap:label="Purchase Customer CSR - ID" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PurchaseCustomerCsrEmail" Type="Edm.String" Nullable="true" sap:label="Purchase Customer CSR - Email" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SalesOrg" Type="Edm.String" Nullable="true" sap:label="Sales Org" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DistributionChannel" Type="Edm.String" Nullable="true" sap:label="Distribution Channel" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SubstitutionReason" Type="Edm.String" Nullable="true" sap:label="Substitution Reason" sap:sortable="true" sap:filterable="true" />
+        <Property Name="EndCustomDiv" Type="Edm.String" Nullable="true" sap:label="End Custom Div" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Plant" Type="Edm.String" Nullable="true" sap:label="Plant" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PlantName" Type="Edm.String" Nullable="true" sap:label="Plant Name" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PlantCountry" Type="Edm.String" Nullable="true" sap:label="Plant Country" sap:sortable="true" sap:filterable="true" />
+        <Property Name="StorageLocation" Type="Edm.String" Nullable="true" sap:label="Storage Location" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Route" Type="Edm.String" Nullable="true" sap:label="Route" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialType" Type="Edm.String" Nullable="true" sap:label="Material Type" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialXDistrChainStatus" Type="Edm.String" Nullable="true" sap:label="Material X-Distr Chain Status" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialDivision" Type="Edm.String" Nullable="true" sap:label="Material Division" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialXPlantStatus" Type="Edm.String" Nullable="true" sap:label="Material X- Plant Status" sap:sortable="true" sap:filterable="true" />
+        <Property Name="AdexaFlag" Type="Edm.String" Nullable="true" sap:label="Adexa Flag" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialLeadTimeWeeks2" Type="Edm.Decimal" Nullable="true" sap:label="Material Lead Time Weeks" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Ncnr" Type="Edm.String" Nullable="true" sap:label="NCNR?" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CurrentSchedDlvDateDiffFromCrd" Type="Edm.String" Nullable="true" sap:label="Current Sched dlv Date diff from CRD" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ExpediteStatus" Type="Edm.String" Nullable="true" sap:label="Expedite Status" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DeliveryPriority" Type="Edm.Int32" Nullable="true" sap:label="Delivery Priority" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderPriority" Type="Edm.Int32" Nullable="true" sap:label="Order Priority" sap:sortable="true" sap:filterable="true" />
+        <Property Name="MaterialGroup3" Type="Edm.String" Nullable="true" sap:label="Material Group 3" sap:sortable="true" sap:filterable="true" />
+        <Property Name="QuoteNumber" Type="Edm.String" Nullable="true" sap:label="Quote Number" sap:sortable="true" sap:filterable="true" />
+        <Property Name="QuoteLine" Type="Edm.Decimal" Nullable="true" sap:label="Quote Line" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoBillingBlockCentralSalesOrg" Type="Edm.String" Nullable="true" sap:label="SoldTo Billing Block (Central/Sales Org)" sap:sortable="true" sap:filterable="true" />
+        <Property Name="SoldtoDlvBlockCentralSalesOrg" Type="Edm.String" Nullable="true" sap:label="SoldTo Dlv Block (Central /Sales Org)" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoBillingBlockCentralSalesOrg" Type="Edm.String" Nullable="true" sap:label="ShipTo Billing Block (Central/Sales Org)" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShiptoDlvBlockCentralSalesOrg" Type="Edm.String" Nullable="true" sap:label="ShipTo Dlv Block (Central/Sales Org)" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderHeaderDeliveryBlock" Type="Edm.String" Nullable="true" sap:label="Order Header Delivery Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ScheduleLineDeliveryBlock" Type="Edm.String" Nullable="true" sap:label="Schedule Line Delivery Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DeliveryBlock" Type="Edm.String" Nullable="true" sap:label="Delivery Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderHeaderBillingBlock" Type="Edm.String" Nullable="true" sap:label="Order Header Billing Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderLineBillingBlock" Type="Edm.String" Nullable="true" sap:label="Order Line Billing Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="LineItemCategory" Type="Edm.String" Nullable="true" sap:label="Line Item Category" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ScheduleLineCategoryFromOrderQuant" Type="Edm.String" Nullable="true" sap:label="Schedule Line Category (from order quant" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GtsEmbargo" Type="Edm.String" Nullable="true" sap:label="GTS - embargo" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GtsScreening" Type="Edm.String" Nullable="true" sap:label="GTS - screening" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GtsLicense" Type="Edm.String" Nullable="true" sap:label="GTS - license" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CreditBlock" Type="Edm.String" Nullable="true" sap:label="Credit Block" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DistiAssetApproval" Type="Edm.String" Nullable="true" sap:label="Disti Asset Approval" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DistiAssetReasonCode" Type="Edm.String" Nullable="true" sap:label="Disti Asset Reason Code" sap:sortable="true" sap:filterable="true" />
+        <Property Name="RejectionReason" Type="Edm.String" Nullable="true" sap:label="Rejection Reason" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Description" Type="Edm.String" Nullable="true" sap:label="Description" sap:sortable="true" sap:filterable="true" />
+        <Property Name="LegacyOrderNumber" Type="Edm.String" Nullable="true" sap:label="Legacy Order Number" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ModelnStatusId" Type="Edm.String" Nullable="true" sap:label="ModelN Status ID" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ModelnStatusDesc" Type="Edm.String" Nullable="true" sap:label="ModelN Status Desc" sap:sortable="true" sap:filterable="true" />
+        <Property Name="IncompleteStatusHeader" Type="Edm.String" Nullable="true" sap:label="Incomplete Status - Header" sap:sortable="true" sap:filterable="true" />
+        <Property Name="IncompleteStatusLine" Type="Edm.String" Nullable="true" sap:label="Incomplete Status - Line" sap:sortable="true" sap:filterable="true" />
+        <Property Name="IncompleteReasons" Type="Edm.String" Nullable="true" sap:label="Incomplete Reasons" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShipCompleteAtHeader" Type="Edm.String" Nullable="true" sap:label="Ship Complete at Header" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ShipCompleteAtLine" Type="Edm.String" Nullable="true" sap:label="Ship Complete at Line" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DocCategory" Type="Edm.String" Nullable="true" sap:label="Doc Category" sap:sortable="true" sap:filterable="true" />
+        <Property Name="OrderReason" Type="Edm.String" Nullable="true" sap:label="Order Reason" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PriceCondition" Type="Edm.String" Nullable="true" sap:label="Price Condition" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PriceCondition2" Type="Edm.String" Nullable="true" sap:label="Price Condition" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Currency" Type="Edm.String" Nullable="true" sap:label="Currency" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Taxes" Type="Edm.Decimal" Nullable="true" sap:label="Taxes" sap:sortable="true" sap:filterable="true" />
+        <Property Name="Freight" Type="Edm.Decimal" Nullable="true" sap:label="Freight" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DiffPlant" Type="Edm.String" Nullable="true" sap:label="DIff Plant" sap:sortable="true" sap:filterable="true" />
+        <Property Name="DeliveryGroup" Type="Edm.String" Nullable="true" sap:label="Delivery Group" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GovRatings" Type="Edm.String" Nullable="true" sap:label="Gov Ratings" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GovProjectId" Type="Edm.String" Nullable="true" sap:label="Gov Project ID" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ContactName" Type="Edm.String" Nullable="true" sap:label="Contact Name" sap:sortable="true" sap:filterable="true" />
+        <Property Name="ScheduledBy" Type="Edm.String" Nullable="true" sap:label="Scheduled By" sap:sortable="true" sap:filterable="true" />
+        <Property Name="YourReference" Type="Edm.String" Nullable="true" sap:label="Your Reference" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GidFiscalQuarter" Type="Edm.String" Nullable="true" sap:label="GID Fiscal Quarter" sap:sortable="true" sap:filterable="true" />
+        <Property Name="GidYearMonth" Type="Edm.String" Nullable="true" sap:label="GID Year-Month" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CrdFiscalQuarter" Type="Edm.String" Nullable="true" sap:label="CRD Fiscal Quarter" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CrdYearMonth" Type="Edm.String" Nullable="true" sap:label="CRD Year-Month" sap:sortable="true" sap:filterable="true" />
+        <Property Name="PoWeeksAheadOfCrd" Type="Edm.Decimal" Nullable="true" sap:label="PO Weeks ahead of CRD" sap:sortable="true" sap:filterable="true" />
+        <Property Name="CustomerGroup2" Type="Edm.String" Nullable="true" sap:label="Customer Group 2" sap:sortable="true" sap:filterable="true" />
+        <Property Name="FtzFlag" Type="Edm.String" Nullable="true" sap:label="FTZ Flag" sap:sortable="true" sap:filterable="true" />
+      </EntityType>
+      <EntityContainer Name="DemandVisibilityService_Entities" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Orders" EntityType="DemandVisibilityService.Order" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="true" sap:content-version="1" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

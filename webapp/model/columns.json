@@ -1,0 +1,642 @@
+[
+  {
+    "label": "Order Number",
+    "property": "OrderNumber",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Line",
+    "property": "OrderLine",
+    "edmType": "Edm.Int32"
+  },
+  {
+    "label": "Sched Line Nbr",
+    "property": "SchedLineNbr",
+    "edmType": "Edm.Int32"
+  },
+  {
+    "label": "Order Type",
+    "property": "OrderType",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "PO Number",
+    "property": "PoNumber",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "PO Line",
+    "property": "PoLine",
+    "edmType": "Edm.Int32"
+  },
+  {
+    "label": "Material",
+    "property": "Material",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Planner",
+    "property": "Planner",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material Entered",
+    "property": "MaterialEntered",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Customer Part Number",
+    "property": "CustomerPartNumber",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Qty",
+    "property": "OrderQty",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Confirmed Qty",
+    "property": "ConfirmedQty",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Total Quantity on Delivery",
+    "property": "TotalQuantityOnDelivery",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Qty on Delivery (not invoiced)",
+    "property": "QtyOnDeliveryNotInvoiced",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Qty Invoiced",
+    "property": "QtyInvoiced",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Open Qty",
+    "property": "OpenQty",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Unit Price",
+    "property": "UnitPrice",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Total Line Value",
+    "property": "TotalLineValue",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Open Value",
+    "property": "OpenValue",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "CRD Date",
+    "property": "CrdDate",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Delivery Date",
+    "property": "DeliveryDate",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Sched Dlv Date",
+    "property": "SchedDlvDate",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Scheduled MAD",
+    "property": "ScheduledMad",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Sched GID Date",
+    "property": "SchedGidDate",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "PO Type",
+    "property": "PoType",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material Lead Time Weeks",
+    "property": "MaterialLeadTimeWeeks",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Created On",
+    "property": "CreatedOn",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Document Created By",
+    "property": "DocumentCreatedBy",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Line Created",
+    "property": "OrderLineCreated",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Line Created By",
+    "property": "LineCreatedBy",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo",
+    "property": "Soldto",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Name 1",
+    "property": "SoldtoName1",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Name 2",
+    "property": "SoldtoName2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Country",
+    "property": "SoldtoCountry",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Parent",
+    "property": "SoldtoParent",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Parent Name",
+    "property": "SoldtoParentName",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo",
+    "property": "Shipto",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Name1",
+    "property": "ShiptoName1",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Name2",
+    "property": "ShiptoName2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Country",
+    "property": "ShiptoCountry",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Parent",
+    "property": "ShiptoParent",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Parent Name",
+    "property": "ShiptoParentName",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Email",
+    "property": "SoldtoEmail",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Email",
+    "property": "ShiptoEmail",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Buyer Email",
+    "property": "BuyerEmail",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "End Customer",
+    "property": "EndCustomer",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "End Customer Name 1",
+    "property": "EndCustomerName1",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "End Customer Parent",
+    "property": "EndCustomerParent",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "End Customer Parent Name",
+    "property": "EndCustomerParentName",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Alt Consignee",
+    "property": "AltConsignee",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Alt Consignee Name 1",
+    "property": "AltConsigneeName1",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Alt Consignee Name 2",
+    "property": "AltConsigneeName2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "RV End Customer",
+    "property": "RvEndCustomer",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "RV End Customer Name1",
+    "property": "RvEndCustomerName1",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "RV End Customer Name2",
+    "property": "RvEndCustomerName2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Purchase Customer CSR - ID",
+    "property": "PurchaseCustomerCsrId",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Purchase Customer CSR - Email",
+    "property": "PurchaseCustomerCsrEmail",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Sales Org",
+    "property": "SalesOrg",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Distribution Channel",
+    "property": "DistributionChannel",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Substitution Reason",
+    "property": "SubstitutionReason",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "End Custom Div",
+    "property": "EndCustomDiv",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Plant",
+    "property": "Plant",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Plant Name",
+    "property": "PlantName",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Plant Country",
+    "property": "PlantCountry",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Storage Location",
+    "property": "StorageLocation",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Route",
+    "property": "Route",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material Type",
+    "property": "MaterialType",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material X-Distr Chain Status",
+    "property": "MaterialXDistrChainStatus",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material Division",
+    "property": "MaterialDivision",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material X- Plant Status",
+    "property": "MaterialXPlantStatus",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Adexa Flag",
+    "property": "AdexaFlag",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Material Lead Time Weeks",
+    "property": "MaterialLeadTimeWeeks2",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "NCNR?",
+    "property": "Ncnr",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Current Sched dlv Date diff from CRD",
+    "property": "CurrentSchedDlvDateDiffFromCrd",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Expedite Status",
+    "property": "ExpediteStatus",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Delivery Priority",
+    "property": "DeliveryPriority",
+    "edmType": "Edm.Int32"
+  },
+  {
+    "label": "Order Priority",
+    "property": "OrderPriority",
+    "edmType": "Edm.Int32"
+  },
+  {
+    "label": "Material Group 3",
+    "property": "MaterialGroup3",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Quote Number",
+    "property": "QuoteNumber",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Quote Line",
+    "property": "QuoteLine",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "SoldTo Billing Block (Central/Sales Org)",
+    "property": "SoldtoBillingBlockCentralSalesOrg",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "SoldTo Dlv Block (Central /Sales Org)",
+    "property": "SoldtoDlvBlockCentralSalesOrg",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Billing Block (Central/Sales Org)",
+    "property": "ShiptoBillingBlockCentralSalesOrg",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ShipTo Dlv Block (Central/Sales Org)",
+    "property": "ShiptoDlvBlockCentralSalesOrg",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Header Delivery Block",
+    "property": "OrderHeaderDeliveryBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Schedule Line Delivery Block",
+    "property": "ScheduleLineDeliveryBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Delivery Block",
+    "property": "DeliveryBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Header Billing Block",
+    "property": "OrderHeaderBillingBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Line Billing Block",
+    "property": "OrderLineBillingBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Line Item Category",
+    "property": "LineItemCategory",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Schedule Line Category (from order quant",
+    "property": "ScheduleLineCategoryFromOrderQuant",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "GTS - embargo",
+    "property": "GtsEmbargo",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "GTS - screening",
+    "property": "GtsScreening",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "GTS - license",
+    "property": "GtsLicense",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Credit Block",
+    "property": "CreditBlock",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Disti Asset Approval",
+    "property": "DistiAssetApproval",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Disti Asset Reason Code",
+    "property": "DistiAssetReasonCode",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Rejection Reason",
+    "property": "RejectionReason",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Description",
+    "property": "Description",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Legacy Order Number",
+    "property": "LegacyOrderNumber",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ModelN Status ID",
+    "property": "ModelnStatusId",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "ModelN Status Desc",
+    "property": "ModelnStatusDesc",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Incomplete Status - Header",
+    "property": "IncompleteStatusHeader",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Incomplete Status - Line",
+    "property": "IncompleteStatusLine",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Incomplete Reasons",
+    "property": "IncompleteReasons",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Ship Complete at Header",
+    "property": "ShipCompleteAtHeader",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Ship Complete at Line",
+    "property": "ShipCompleteAtLine",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Doc Category",
+    "property": "DocCategory",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Order Reason",
+    "property": "OrderReason",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Price Condition",
+    "property": "PriceCondition",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Price Condition",
+    "property": "PriceCondition2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Currency",
+    "property": "Currency",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Taxes",
+    "property": "Taxes",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Freight",
+    "property": "Freight",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "DIff Plant",
+    "property": "DiffPlant",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Delivery Group",
+    "property": "DeliveryGroup",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Gov Ratings",
+    "property": "GovRatings",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Gov Project ID",
+    "property": "GovProjectId",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Contact Name",
+    "property": "ContactName",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Scheduled By",
+    "property": "ScheduledBy",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "Your Reference",
+    "property": "YourReference",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "GID Fiscal Quarter",
+    "property": "GidFiscalQuarter",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "GID Year-Month",
+    "property": "GidYearMonth",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "CRD Fiscal Quarter",
+    "property": "CrdFiscalQuarter",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "CRD Year-Month",
+    "property": "CrdYearMonth",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "PO Weeks ahead of CRD",
+    "property": "PoWeeksAheadOfCrd",
+    "edmType": "Edm.Decimal"
+  },
+  {
+    "label": "Customer Group 2",
+    "property": "CustomerGroup2",
+    "edmType": "Edm.String"
+  },
+  {
+    "label": "FTZ Flag",
+    "property": "FtzFlag",
+    "edmType": "Edm.String"
+  }
+]

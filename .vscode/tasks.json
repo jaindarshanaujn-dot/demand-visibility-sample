@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "npm: install", "type": "shell", "command": "npm install", "problemMatcher": [] },
+    {
+      "label": "Start app (port 8080)",
+      "type": "shell",
+      "command": "npm run start:nobrowser",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": { "regexp": "^$" },
+        "background": { "activeOnStart": true, "beginsPattern": "Starting", "endsPattern": "http://localhost:8080" }
+      },
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}
