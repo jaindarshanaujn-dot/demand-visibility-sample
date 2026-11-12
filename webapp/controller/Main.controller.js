@@ -13,10 +13,7 @@ sap.ui.define([
   "use strict";
 
   var PAGE_SIZE = 15;
-<<<<<<< HEAD
   var MATERIAL_URL_BASE = "https://octopart.com/part/analog-devices/";
-=======
->>>>>>> 28ecbb98c67e6494be70e6debb75d879a4fac289
   var BASIC_SEARCH_FIELDS = ["OrderNumber", "Material", "Planner"];
 
   return Controller.extend("com.saputo.demandvisibility.controller.Main", {
@@ -316,22 +313,18 @@ sap.ui.define([
       var oRow = oContext.getObject();
       var sMode = oSource.data("property") === "Material" ? "material" : "order";
 
-<<<<<<< HEAD
       // Material link: only a new browser tab (https://octopart.com/part/analog-devices/<Material>), no popup, no side panel.
       if (sMode === "material") {
         this._openMaterialInNewTab(oRow.Material);
         return;
       }
 
-=======
->>>>>>> 28ecbb98c67e6494be70e6debb75d879a4fac289
       // Same information in the popup AND in the side panel; the clicked row becomes the selected row.
       this._selectRowOfControl(oSource);
       this._showSidePanel(oRow, sMode);
       this._openDetailDialog(oRow, sMode);
     },
 
-<<<<<<< HEAD
     _openMaterialInNewTab: function (sMaterial) {
       if (!sMaterial) {
         return;
@@ -346,8 +339,6 @@ sap.ui.define([
       }
     },
 
-=======
->>>>>>> 28ecbb98c67e6494be70e6debb75d879a4fac289
     _selectRowOfControl: function (oControl) {
       var oInnerTable = this.byId("smartTable").getTable();
       var oTableRow = oControl.getParent();
