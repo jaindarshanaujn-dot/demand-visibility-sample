@@ -1,0 +1,60 @@
+{
+  "filters": [
+    {
+      "label": "Sales Org",
+      "property": "SalesOrg"
+    },
+    {
+      "label": "Distribution Channel",
+      "property": "DistributionChannel"
+    },
+    {
+      "label": "Division",
+      "property": "MaterialDivision"
+    },
+    {
+      "label": "Sold-to-Party",
+      "property": "Soldto"
+    },
+    {
+      "label": "Ship-to-Party",
+      "property": "Shipto"
+    },
+    {
+      "label": "End Customer",
+      "property": "EndCustomer"
+    },
+    {
+      "label": "Sales Order Type",
+      "property": "OrderType"
+    },
+    {
+      "label": "Sales Order Number",
+      "property": "OrderNumber"
+    },
+    {
+      "label": "Created On",
+      "property": "CreatedOn"
+    },
+    {
+      "label": "Created By",
+      "property": "DocumentCreatedBy"
+    },
+    {
+      "label": "PO Number",
+      "property": "PoNumber"
+    },
+    {
+      "label": "PO Type",
+      "property": "PoType"
+    },
+    {
+      "label": "Plant",
+      "property": "Plant"
+    },
+    {
+      "label": "Material",
+      "property": "Material"
+    }
+  ]
+}

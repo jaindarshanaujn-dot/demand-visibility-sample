@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run app (npm start)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm start"
+    },
+    {
+      "name": "Debug in Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080/index.html",
+      "webRoot": "${workspaceFolder}/webapp",
+      "preLaunchTask": "Start app (port 8080)"
+    }
+  ]
+}

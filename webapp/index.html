@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demand Visibility</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html,
+      body,
+      #content {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+    <script>
+      // Remove stale flexibility/personalization data from earlier persistencyKey versions
+      // so a corrupted local variant can't silently blank the app.
+      Object.keys(window.localStorage || {}).forEach(function (sKey) {
+        if (/DV_FilterBar(?!_v)|DV_Table(?!_v)/.test(sKey)) {
+          window.localStorage.removeItem(sKey);
+        }
+      });
+      window.addEventListener("error", function (oEvent) {
+        var oContent = document.getElementById("content");
+        if (oContent && !oContent.childElementCount) {
+          oContent.innerHTML =
+            "<pre style='color:red;padding:16px;'>" +
+            (oEvent.message || "Unknown error") +
+            "</pre>";
+        }
+      });
+    </script>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://ui5.sap.com/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_horizon"
+      data-sap-ui-libs="sap.m,sap.ui.comp,sap.ui.table,sap.ui.layout"
+      data-sap-ui-oninit="module:com/saputo/demandvisibility/init"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-async="true"
+      data-sap-ui-preload="async"
+      data-sap-ui-xx-componentPreload="off"
+      data-sap-ui-flexibilityServices='[{"connector":"LocalStorageConnector"}]'
+      data-sap-ui-resourceroots='{"com.saputo.demandvisibility":"./"}'
+    ></script>
+  </head>
+  <body class="sapUiBody sapUiSizeCompact">
+    <div id="content"></div>
+  </body>
+</html>

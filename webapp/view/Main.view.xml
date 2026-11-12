@@ -1,0 +1,122 @@
+<mvc:View
+  controllerName="com.saputo.demandvisibility.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+  xmlns:smartTable="sap.ui.comp.smarttable"
+  xmlns:core="sap.ui.core"
+  xmlns:layout="sap.ui.layout"
+  xmlns:table="sap.ui.table"
+>
+  <layout:Splitter id="mainSplitter" orientation="Horizontal" height="100%" width="100%">
+    <layout:contentAreas>
+    <Page id="masterPage" title="{i18n>APP_TITLE}">
+        <layoutData>
+            <FlexItemData growFactor="1" />
+          </layoutData>
+        <content>
+          <VBox class="sapUiSmallMargin">
+            <smartFilterBar:SmartFilterBar
+              id="smartFilterBar"
+              entitySet="Orders"
+              persistencyKey="DV_FilterBar_v2"
+              useToolbar="true"
+              enableBasicSearch="true"
+              showFilterConfiguration="true"
+              search="onFilterSearch"
+            />
+            <smartTable:SmartTable
+              id="smartTable"
+              entitySet="Orders"
+              tableType="Table"
+              useVariantManagement="true"
+              useTablePersonalisation="true"
+              enableExport="false"
+              showRowCount="true"
+              header="{i18n>TABLE_HEADER}"
+              persistencyKey="DV_Table_v2"
+              enableAutoBinding="false"
+              beforeRebindTable="onBeforeRebindTable"
+              initiallyVisibleFields="OrderNumber,OrderLine,Material,Planner,OrderQty,OpenQty,SalesOrg,DistributionChannel,Soldto,Shipto,EndCustomer,Plant,CrdDate,DeliveryDate,OpenValue"
+              requestAtLeastFields="OrderNumber,OrderLine,Material,Planner,OrderQty,OpenQty,SalesOrg,DistributionChannel,Soldto,Shipto,EndCustomer,Plant,CrdDate,DeliveryDate,OpenValue"
+            >
+              <smartTable:customToolbar>
+                <OverflowToolbar>
+                  <Button text="Previous" press="onPreviousPage" enabled="{ui>/hasPreviousPage}" />
+                  <Button text="Next" press="onNextPage" enabled="{ui>/hasNextPage}" />
+                  <Text text="{ui>/pageSummary}" />
+                  <ToolbarSpacer />
+                  <Button text="Export to Excel" type="Emphasized" press="onExportExcel" />
+                </OverflowToolbar>
+              </smartTable:customToolbar>
+            <table:Table
+              id="innerTable"
+              selectionMode="Single"
+              selectionBehavior="Row"
+              enableSelectAll="false"
+            />
+            </smartTable:SmartTable>
+          </VBox>
+        </content>
+      </Page>
+    </layout:contentAreas>
+    <layout:dependents>
+      <Page id="detailPage" title="{detail>/title}" showNavButton="true" navButtonPress="onCloseDetailPanel">
+        <layoutData>
+          <layout:SplitterLayoutData size="30%" minSize="220" />
+        </layoutData>
+        <headerContent>
+          <Button text="Open in New Tab" icon="sap-icon://action" press="onOpenDetailInNewTab" />
+          <Button text="Close" press="onCloseDetailPanel" />
+        </headerContent>
+        <content>
+          <VBox class="sapUiSmallMargin" renderType="Bare">
+            <Text text="Click any entry marked with &gt; to see related information in the third panel." class="sapUiSmallMarginBottom" />
+            <core:Fragment fragmentName="com.saputo.demandvisibility.view.DetailPanelContent" type="XML" />
+          </VBox>
+        </content>
+      </Page>
+      <Page id="relatedPage" title="{related>/title}" showNavButton="true" navButtonPress="onCloseRelatedPanel" busy="{related>/busy}">
+        <layoutData>
+          <layout:SplitterLayoutData size="30%" minSize="220" />
+        </layoutData>
+        <headerContent>
+          <Button text="Close" press="onCloseRelatedPanel" />
+        </headerContent>
+        <content>
+          <VBox class="sapUiSmallMargin" renderType="Bare">
+            <Panel headerText="Summary" class="sapUiSmallMarginBottom" width="auto">
+              <List items="{related>/summary}" showSeparators="Inner" backgroundDesign="Transparent">
+                <DisplayListItem label="{related>label}" value="{related>value}" />
+              </List>
+            </Panel>
+            <Panel headerText="{related>/linesTitle}" width="auto">
+              <Table items="{related>/lines}" contextualWidth="Auto" popinLayout="GridSmall" noDataText="No related order lines">
+                <columns>
+                  <Column><Text text="Order Number" /></Column>
+                  <Column hAlign="End"><Text text="Line" /></Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Material" /></Column>
+                  <Column hAlign="End" minScreenWidth="Tablet" demandPopin="true"><Text text="Open Qty" /></Column>
+                  <Column minScreenWidth="Tablet" demandPopin="true"><Text text="Delivery Date" /></Column>
+                  <Column minScreenWidth="Desktop" demandPopin="true"><Text text="Plant" /></Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{related>orderNumber}" />
+                      <Text text="{related>orderLine}" />
+                      <Text text="{related>material}" />
+                      <Text text="{related>openQty}" />
+                      <Text text="{related>deliveryDate}" />
+                      <Text text="{related>plant}" />
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+        </content>
+      </Page>
+    </layout:dependents>
+  </layout:Splitter>
+</mvc:View>

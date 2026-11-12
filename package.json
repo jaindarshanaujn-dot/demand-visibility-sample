@@ -1,0 +1,17 @@
+{
+  "name": "demand-visibility-sample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample UI5/Fiori app backed by mock OData generated from Excel",
+  "scripts": {
+    "generate:data": "node scripts/generate-mock-data.mjs",
+    "prestart": "npm run generate:data",
+    "start": "ui5 serve --open index.html --port 8080",
+    "start:nobrowser": "ui5 serve --port 8080",
+    "build": "ui5 build --all --clean-dest"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4.0.8",
+    "xlsx": "^0.18.5"
+  }
+}
